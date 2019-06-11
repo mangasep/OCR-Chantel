@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flipboard.bottomsheet.BottomSheetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#efefef"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp">
+
+            <ImageView
+                android:id="@+id/foto"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/foto"
+                android:text="Welcome"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text1"
+                android:layout_toRightOf="@+id/foto"
+                android:text="admin"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/image_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_photos" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/lay_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lay1"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/preview"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <ImageView
+                    android:id="@+id/preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="#ffff"
+                    android:elevation="2dp"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter" />
+
+                <RelativeLayout
+                    android:id="@+id/tekscontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/preview"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/custom_edit_text"
+                    android:padding="7dp">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tekscontent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/custom_line_text"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp">
+
+                    <!--<at.blogc.android.views.ExpandableTextView
+                        android:id="@+id/tvContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="5"
+                        android:padding="5dp"
+                        android:text="content"
+                        android:textSize="13sp"
+                        app:animation_duration="750" />-->
+                    <TextView
+                        android:id="@+id/tvContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="content"
+                        android:textSize="15sp" />
+
+                    <ImageButton
+                        android:id="@+id/button_copy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvContent"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@+id/button_share"
+                        android:background="@null"
+                        android:clickable="true"
+                        android:paddingTop="3dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="3dp"
+                        android:src="@drawable/copy_content" />
+
+                    <ImageButton
+                        android:id="@+id/button_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvContent"
+                        android:layout_alignParentRight="true"
+                        android:clickable="true"
+                        android:background="@null"
+                        android:paddingTop="3dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="3dp"
+                        android:src="@drawable/ic_share_black_24dp" />
+
+
+                </RelativeLayout>
+
+                <!--<EditText
+                    android:id="@+id/tvContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tekscontent"
+                    android:padding="5dp"
+                    android:text="content"
+                    android:textSize="13sp"
+                    android:background="@drawable/custom_line_text"
+                    android:layout_marginBottom="10dp"/>-->
+                <!--<Button
+                    android:id="@+id/pickImage"
+                    android:layout_below="@+id/tvContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:textColor="#ffff"
+                    android:textStyle="bold"
+                    android:background="#00d24d"
+                    android:text="Ekstract Image"
+                    android:layout_marginBottom="10dp"/>-->
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/pickImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:background="@color/colorAccent"
+            android:src="@drawable/ic_add_a_photo_black_24dp" />
+
+        <!--<android.support.v7.widget.AppCompatButton
+            android:id="@+id/pickImage"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#00d24d"
+            android:text="Extract Image"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />-->
+    </RelativeLayout>
+</com.flipboard.bottomsheet.BottomSheetLayout>
