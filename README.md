@@ -1,5 +1,5 @@
 # OCR-Chantel
-
+Sample apps document extractor to text using API opencv
 
 ### Prerequisites
 
@@ -17,4 +17,7 @@
 * Camera text recognition
 
 ### Screenshots
+<p align="center">
+  <img src="https://github.com/mangasep/OCR-Chantel/blob/master/screenshoot/apps-screenshoot.gif" width="250" height="400" />
+</p>
 
