@@ -18,6 +18,6 @@ Sample apps document extractor to text using API opencv
 
 ### Screenshots
 <p align="center">
-  <img src="https://github.com/mangasep/OCR-Chantel/blob/master/screenshoot/apps-screenshoot.gif" width="250" height="400" />
+  <img src="https://github.com/mangasep/OCR-Chantel/blob/master/screenshoot/apps_screenshoot.gif" width="250" height="400" />
 </p>
 
